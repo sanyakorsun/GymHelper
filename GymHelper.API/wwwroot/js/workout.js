@@ -211,6 +211,16 @@ async function saveSet(button, workoutExerciseId) {
         return;
     }
 
+    if (weight < 0 || weight > 1000) {
+        message.textContent = "Вага має бути від 0 до 1000 кг";
+        return;
+    }
+
+    if (reps < 1 || reps > 1000) {
+        message.textContent = "Кількість повторень має бути від 1 до 1000";
+        return;
+    }
+
     try {
         const response = await fetch("/api/sets", {
             method: "POST",

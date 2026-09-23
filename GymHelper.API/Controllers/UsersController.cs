@@ -22,4 +22,30 @@ public class UsersController : ControllerBase
 
         return Created($"/api/users/{user.Id}", user);
     }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(Guid id)
+    {
+        var user = await _service.GetByIdAsync(id);
+
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(user);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(Guid id, UpdateUserDto dto)
+    {
+        var user = await _service.UpdateAsync(id, dto);
+
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(user);
+    }
 }

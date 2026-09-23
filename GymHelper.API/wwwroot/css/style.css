@@ -355,3 +355,41 @@ p {
         width: 100%;
     }
 }
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    padding: 20px;
+    background: #101010;
+    border: 1px solid #292929;
+}
+
+    .stat span {
+        display: block;
+        font-size: 28px;
+        font-weight: 800;
+        color: #f5f5f5;
+    }
+
+    .stat p {
+        margin: 8px 0 0;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+@media (max-width: 600px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+#exercises p {
+    margin: 10px 0 20px;
+}

@@ -6,6 +6,7 @@
     <title>GymHelper — Профіль</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
@@ -14,27 +15,29 @@
     </header>
 
     <main>
+
         <section class="profile">
-            <h2>Створення профілю</h2>
+            <h2>Мій профіль</h2>
 
             <input id="name" type="text" placeholder="Ім'я">
-
             <input id="age" type="number" placeholder="Вік">
-
             <input id="weight" type="number" step="0.1" placeholder="Вага (кг)">
-
             <input id="height" type="number" step="0.1" placeholder="Зріст (см)">
 
-            <button onclick="createUser()">Створити профіль</button>
+            <button id="saveButton" onclick="saveProfile()">
+                Зберегти зміни
+            </button>
 
             <p id="message"></p>
         </section>
+
+        <a href="index.html">
+            <button>На головну</button>
+        </a>
+
     </main>
 
-    <a href="index.html">
-        <button>На головну</button>
-    </a>
+    <script src="js/profile.js?v=2"></script>
 
-    <script src="js/profile.js"></script>
 </body>
 </html>
