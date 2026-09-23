@@ -1,0 +1,376 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #090909;
+    color: #f5f5f5;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: #090909;
+    padding: 70px 30px 55px;
+    border-bottom: 1px solid #292929;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 52px;
+        font-weight: 900;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+    }
+
+    header p {
+        margin: 12px 0 0;
+        color: #888;
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.profile,
+.workout,
+.menu {
+    background: #101010;
+    padding: 32px;
+    margin-bottom: 18px;
+    border: 1px solid #292929;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+    margin: 0 0 28px;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #333;
+    border-radius: 0;
+    background: #090909;
+    color: #f5f5f5;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+    input::placeholder {
+        color: #666;
+    }
+
+    input:focus,
+    select:focus {
+        outline: none;
+        border-color: #aaa;
+        background: #0d0d0d;
+    }
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 0 0 12px;
+    border: 1px solid #444;
+    border-radius: 0;
+    background: #181818;
+    color: #f5f5f5;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    button:hover {
+        background: #242424;
+        border-color: #777;
+        transform: translateX(3px);
+    }
+
+    button:active {
+        transform: translateX(1px);
+    }
+
+    button:disabled {
+        background: #111;
+        color: #555;
+        border-color: #222;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+    a button {
+        margin-bottom: 0;
+    }
+
+.menu {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+    .menu a,
+    .menu > button {
+        margin-bottom: 10px;
+    }
+
+        .menu a button,
+        .menu > button {
+            padding: 20px;
+            text-align: left;
+            font-size: 16px;
+            background: #101010;
+        }
+
+            .menu a button:hover,
+            .menu > button:hover {
+                background: #181818;
+            }
+
+#message,
+#workoutMessage,
+#exerciseMessage,
+#finishMessage {
+    text-align: center;
+    margin: 18px 0 0;
+    font-weight: 700;
+    color: #aaa;
+}
+
+.set {
+    padding: 20px;
+    margin-bottom: 14px;
+    background: #090909;
+    border: 1px solid #292929;
+    border-radius: 0;
+}
+
+    .set h3 {
+        margin: 0 0 15px;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .set input {
+        margin-bottom: 10px;
+    }
+
+    .set button {
+        margin-bottom: 0;
+    }
+
+.set-message {
+    text-align: center;
+    margin: 12px 0 0;
+    font-weight: 700;
+    color: #aaa;
+}
+
+.history-exercises {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .history-exercises .set {
+        margin-bottom: 0;
+    }
+
+p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+::selection {
+    background: #f5f5f5;
+    color: #090909;
+}
+.hero {
+    padding: 60px 35px;
+    margin-bottom: 20px;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    background: #0d0d0d;
+}
+
+.hero-label {
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.hero h2 {
+    text-align: left;
+    font-size: 52px;
+    line-height: 0.98;
+    letter-spacing: -3px;
+    margin: 0 0 30px;
+}
+
+.hero-text {
+    max-width: 500px;
+    margin: 0;
+    color: #777;
+    font-size: 15px;
+}
+
+.main-action {
+    margin-bottom: 20px;
+}
+
+    .main-action button {
+        height: 70px;
+        margin: 0;
+        font-size: 17px;
+        text-align: left;
+        padding-left: 22px;
+        background: #f5f5f5;
+        color: #090909;
+        border: 1px solid #f5f5f5;
+    }
+
+        .main-action button:hover {
+            background: #d8d8d8;
+            border-color: #d8d8d8;
+        }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+    .menu-grid a {
+        margin: 0;
+    }
+
+    .menu-grid button {
+        height: 68px;
+        margin: 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .menu-grid a:last-child {
+        grid-column: 1 / -1;
+    }
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #292929;
+}
+
+    .history-header h2 {
+        margin: 0;
+        text-align: left;
+    }
+
+.delete-workout-button {
+    width: auto;
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 14px;
+    font-size: 10px;
+    color: #777;
+    border-color: #333;
+}
+
+    .delete-workout-button:hover {
+        background: #211111;
+        border-color: #633;
+        color: #aaa;
+    }
+
+.history-exercises {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .history-exercises .set {
+        margin: 0;
+        padding: 16px 18px;
+    }
+
+        .history-exercises .set h3 {
+            margin-bottom: 10px;
+        }
+
+.workout > p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 50px 20px 40px;
+    }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+    main {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .hero {
+        padding: 40px 25px;
+    }
+
+        .hero h2 {
+            font-size: 40px;
+        }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+        .menu-grid a:last-child {
+            grid-column: auto;
+        }
+
+    .history-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .delete-workout-button {
+        width: 100%;
+    }
+}

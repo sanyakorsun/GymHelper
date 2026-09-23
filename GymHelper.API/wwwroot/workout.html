@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymHelper — Тренування</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GymHelper</h1>
+        <p>Нове тренування</p>
+    </header>
+
+    <main>
+
+        <section class="workout">
+            <h2>Створити тренування</h2>
+
+            <input id="workoutDate" type="date">
+
+            <button onclick="createWorkout()">
+                Створити тренування
+            </button>
+
+            <p id="workoutMessage"></p>
+        </section>
+
+        <section class="workout">
+            <h2>Додати вправу</h2>
+
+            <select id="exerciseSelect" disabled>
+                <option value="">Спочатку створи тренування</option>
+            </select>
+
+            <button id="addExerciseButton" onclick="addExercise()" disabled>
+                Додати вправу
+            </button>
+
+            <p id="exerciseMessage"></p>
+        </section>
+
+        <section id="workoutExercises"></section>
+
+        <section class="workout">
+            <button id="finishWorkoutButton" onclick="finishWorkout()" disabled>
+                Завершити тренування
+            </button>
+
+            <p id="finishMessage"></p>
+        </section>
+
+        <a href="index.html">
+            <button>На головну</button>
+        </a>
+
+    </main>
+
+    <script src="js/workout.js"></script>
+
+</body>
+</html>

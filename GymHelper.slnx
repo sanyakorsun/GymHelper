@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/GymHelper.Web/" />
+  <Project Path="GymHelper.API/GymHelper.API.csproj" />
+  <Project Path="GymHelper.Application/GymHelper.Application.csproj" Id="eb97e0c9-0cf4-497d-92e1-62a377da837c" />
+  <Project Path="GymHelper.Domain/GymHelper.Domain.csproj" Id="ab850994-6eb7-4118-8cba-77d80e60276f" />
+  <Project Path="GymHelper.Infrastructure/GymHelper.Infrastructure.csproj" Id="de7c3761-a51b-44b7-8fe8-8a44df02d0d3" />
+</Solution>

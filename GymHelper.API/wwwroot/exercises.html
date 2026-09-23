@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymHelper — Мої вправи</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GymHelper</h1>
+        <p>Мої вправи</p>
+    </header>
+
+    <main>
+
+        <section class="workout">
+            <h2>Додати вправу</h2>
+
+            <input id="exerciseName"
+                   type="text"
+                   placeholder="Назва вправи">
+
+            <input id="muscleGroup"
+                   type="text"
+                   placeholder="Група м'язів">
+
+            <input id="description"
+                   type="text"
+                   placeholder="Опис">
+
+            <button onclick="createExercise()">
+                Додати вправу
+            </button>
+
+            <p id="exerciseMessage"></p>
+        </section>
+
+        <section id="exercises"></section>
+
+        <a href="index.html">
+            <button>На головну</button>
+        </a>
+
+    </main>
+
+    <script src="js/exercises.js"></script>
+
+</body>
+</html>
